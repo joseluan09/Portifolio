@@ -1,29 +1,123 @@
-<header>
-  <h1>Luan - Desenvolvedor Front-end</h1>
-  <nav>
-    <a href="#projetos">Projetos</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#contato">Contato</a>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<section id="projetos">
-  <h2>Meus Projetos</h2>
-  <div class="projeto">
-    <h3>Jogo de Cartas One Piece</h3>
-    <p>Sistema de pastas interativas com React + Tailwind</p>
-    <a href="#">Ver Projeto</a>
-  </div>
-  <!-- Coloca outros aqui -->
-</section>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - José Luan</title>
+    <link rel="icon" href="imagens/logo/logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-<section id="sobre">
-  <h2>Sobre mim</h2>
-  <p>Sou designer e programador apaixonado por transformar ideias em interfaces interativas. No momento, foco em HTML, CSS e JavaScript.</p>
-</section>
+<body>
+    <header>
+        <h1>José Luan | Designer Gráfico & Front-end Developer </h1>
+        <nav>
+            <a href="#projetos">Projetos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-<section id="contato">
-  <h2>Contato</h2>
-  <p>Email: luan@email.com</p>
-  <p>GitHub: github.com/seuuser</p>
-</section>
+    <main>
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-details">
+                        <p class="text-title">Projeto Cards One Piece</p>
+                        <p class="text-body">Sistema de cartas inspirado em One Piece com raridades, magias e efeitos
+                            visuais, usando React e Tailwind CSS.</p>
+                    </div>
+                    <button type="button" class="card-button">Mais informações</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-details">
+                        <p class="text-title">Portfólio Profissional</p>
+                        <p class="text-body">Site pessoal feito em HTML, CSS e JavaScript, mostrando meus projetos,
+                            experiência e habilidades front-end.</p>
+                    </div>
+                    <button type="button" class="card-button">Mais informações</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-details">
+                        <p class="text-title">Experiência FDI - Design Gráfico</p>
+                        <p class="text-body">Trabalho como designer gráfico, criando artes usando Photoshop, Corel Draw e
+                            Canva, além de atendimento direto ao cliente.</p>
+                    </div>
+                    <button type="button" class="card-button">Mais informações</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <p>
+                Prazer, sou Luan — Designer e Programador. Gosto de transformar ideias em soluções digitais que unem
+                estética, usabilidade e resultado. Tenho experiência com design gráfico, interfaces modernas e
+                desenvolvimento web, sempre buscando entregar projetos bem resolvidos, com atenção aos detalhes e à
+                experiência do usuário.
+            </p>
+            <p>
+                Atualmente curso Análise e Desenvolvimento de Sistemas (ADS), aprofundando meu conhecimento em programação e
+                estrutura de software. Um dos projetos que desenvolvi é um Sistema de Senhas com Python e CustomTkinter,
+                dividido em três interfaces independentes (Cliente, Atendente e Painel de Chamada), pensado para ser
+                simples, funcional e bem estruturado.
+            </p>
+            <p>
+                Também crio projetos paralelos que unem criatividade e técnica. Um exemplo é um sistema de cartas baseado em
+                One Piece, com raridades, efeitos e categorias visuais, tudo desenvolvido em React e Tailwind. Gosto de
+                desafiar minha lógica e meu senso estético ao mesmo tempo — e é isso que me motiva a evoluir sempre.
+            </p>
+            <p>Se você valoriza ideias bem pensadas, design limpo e código com propósito, tamo junto.</p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li><strong>Design Gráfico:</strong> Photoshop, Corel Draw, Canva</li>
+                <li><strong>Atendimento ao Cliente:</strong> Experiência sólida traduzindo demandas em soluções visuais eficazes</li>
+                <li><strong>Front-end:</strong> HTML5, CSS3 (Flexbox, Grid), JavaScript (ES6+, manipulação do DOM)</li>
+                <li><strong>UX/UI Básico:</strong> Aplicação prática para melhorar usabilidade e experiência</li>
+                <li><strong>Controle de versão:</strong> Git básico</li>
+            </ul>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiência Profissional</h2>
+
+            <h3>FDI — Designer Gráfico</h3>
+            <p><em>2 anos</em></p>
+            <ul>
+                <li>Atendimento ao cliente direto, entendendo demandas e entregando artes e layouts personalizados.</li>
+                <li>Criação e desenvolvimento de peças gráficas usando Photoshop, Corel Draw e Canva.</li>
+                <li>Trabalho com paletas de cores e identidade visual para diversas áreas da empresa.</li>
+                <li>Foco em qualidade, prazos e padrão tradicional de design.</li>
+            </ul>
+
+            <h3>Freelancer — Desenvolvedor Front-end</h3>
+            <ul>
+                <li>Criação de sites responsivos com HTML, CSS e JavaScript.</li>
+                <li>Conversão fiel de layouts para código funcional e limpo.</li>
+                <li>Comunicação direta com clientes para alinhamento e entrega eficaz.</li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Email: <a href="mailto:joseluanb20@outlook.com">joseluanb20@outlook.com</a></p>
+            <p>GitHub: <a href="https://github.com/joseluan09" target="_blank" rel="noopener noreferrer">github.com/joseluan09</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/joseluan09" target="_blank" rel="noopener noreferrer">linkedin.com/in/joseluan09</a></p>
+        </section>
+    </main>
+
+    <footer>&copy;2025 Luan. Todos os direitos reservados.</footer>
+
+</body>
+
+</html>

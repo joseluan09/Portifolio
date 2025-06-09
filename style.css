@@ -1,0 +1,279 @@
+:root {
+    /* Cores principais */
+    --cor-preto: #0D0D0D;
+    --cor-preto-secundario: #1A1A1A;
+    --cor-azul: #004AAD;
+    --cor-azul-hover: #2563EB;
+    --cor-branco: #F5F5F5;
+    --cor-cinza-texto: #B3B3B3;
+
+    /* Utilitários */
+    --cor-borda: rgba(255, 255, 255, 0.1);
+    --cor-sombra: rgba(0, 0, 0, 0.5);
+
+    /* Fontes */
+    --fonte-principal: 'Poppins', sans-serif;
+    --tamanho-texto: 1rem;
+    --tamanho-titulo: 2rem;
+
+    /* Espaçamento */
+    --espaco-pequeno: 8px;
+    --espaco-medio: 16px;
+    --espaco-grande: 32px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(imagens/Background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--cor-branco);
+    font-family: var(--fonte-principal);
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #004aad55, transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #2563EB33, transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--cor-azul);
+}
+
+a {
+    color: var(--cor-azul);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--cor-azul-hover);
+}
+
+button {
+    background-color: var(--cor-azul);
+    color: var(--cor-branco);
+    border: none;
+    padding: var(--espaco-pequeno) var(--espaco-medio);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--cor-azul-hover);
+}
+
+/* Cards ajustados pro tema escuro */
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 20px;
+    background: var(--cor-preto-secundario);
+    /* Fundo escuro para o card */
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid var(--cor-borda);
+    transition: 0.5s ease-out;
+    overflow: visible;
+}
+
+.card-details {
+    color: var(--cor-branco);
+    height: 100%;
+    gap: 0.5em;
+    display: grid;
+    place-content: center;
+}
+
+.card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--cor-azul);
+    color: var(--cor-branco);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.text-body {
+    color: var(--cor-cinza-texto);
+    font-size: 0.9rem;
+}
+
+/* Textos */
+.text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--cor-azul);
+}
+
+/* Hover */
+.card:hover {
+    border-color: var(--cor-azul);
+    box-shadow: 0 4px 18px 0 var(--cor-sombra);
+}
+
+.card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
+
+/* Header e Nav */
+header {
+    background-color: var(--cor-preto-secundario);
+    padding: var(--espaco-medio) var(--espaco-grande);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-borda);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-align: center;
+    border-radius: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-azul);
+    margin: 0 0 var(--espaco-pequeno) 0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 5px #004aad88;
+}
+
+header nav {
+    display: flex;
+    gap: var(--espaco-medio);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 4px 6px;
+    transition: color 0.2s;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--cor-azul);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    color: var(--cor-azul-hover);
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* Seções */
+section {
+    padding: var(--espaco-grande);
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+section h2 {
+    margin-bottom: var(--espaco-medio);
+}
+
+#projetos {
+    padding-bottom: 40px;
+}
+
+#projetos h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    /* Espaço entre o título e os cards */
+    color: var(--cor-azul);
+    /* Mantém a cor azul que você já usa */
+}
+
+#projetos .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+
+
+/* Links de contato */
+#contato a {
+    color: var(--cor-azul);
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Ajustes responsivos simples */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: var(--espaco-pequeno);
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: var(--espaco-medio);
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+}
